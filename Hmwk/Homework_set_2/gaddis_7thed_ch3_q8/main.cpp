@@ -7,6 +7,7 @@
 //System Defined Libraries 
 #include <iostream>
 
+
 using namespace std;
 //User Defined Libraries
 
@@ -19,12 +20,13 @@ using namespace std;
 int main(int argc, char** argv) {
 //Naming the Variables 
     float t_k,t_a,t_gross,t_net, t_loss;
-    const char MSIZE=10;
-    char movie1[MSIZE], movie2[MSIZE], movie3[MSIZE];
+    const int SIZE=80;
+    char movie1[SIZE];
+    
     
 //Asking the user for info
     cout<<"Enter the name of the movie: ";
-    cin>> movie1;
+    cin.getline(movie1,SIZE);
     cout<<"Enter number of children tickets sold: ";
     cin>>t_k;
     cout<<"Enter the number of adult tickets sold: ";
