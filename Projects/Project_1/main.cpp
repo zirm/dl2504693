@@ -35,9 +35,23 @@ int main(int argv,char *argc[]){
     cout<<"If you get a fast vehicle, you will arrive to Oregon Quicker, facing less dangers; however, you will have less\n";
     cout<<"money to spend on HP(Health), Weapons and Merchants to keep your family alive!\n"; 
     cout<<"Use your money wisely. You only have 1000 Cash.\n";
-    cout<<"Press any key to continue \n";
+    cout<<"Press any key to continue";
     cin>>dummy;
-
+    
+    cout<<endl<<"You Have Three Choices for vehicles. Remember, you only have 1000 Dollars!\n" 
+    <<"Your fastest choice is a Bentley Flying Spur W12\n" 
+    <<"This baby will take you home in just 4 events! However it comes at a cost of 750 Dollars.\n"
+    <<"Your confort choice is the a good old Honda Accord.\nIt's obvously not nearly as fast as the Bentley "
+    <<"But the price is far more affortable at just 400 Dollars. This baby will take you home in 8 Events.\n"
+    <<"If you're feeling cheep and want to enjoy the ride, you can purchase a Nissan Vanette.\nA nice little van that the kids will love "
+    <<"at a dirt cheep price of 200 Dollars; however this baby will take 12 events to take you home\n"
+    <<"Press any key to continue";
+    cin>>dummy;
+    cout<<endl<<"You will also have two choices of weapons. A handgun or a shotgun.The handgun is the cheeper choice at 50 dollars.\n"
+    <<"The shotgun is a little more expensive at a price of 100 dollars; however you're 50% more likely to win in an encounter. The handgun give you points in style though\n"
+    <<"Press any key to continue ";
+    cin>>dummy;
+ 
     do{
         Menu();
         inN=getN();
@@ -45,27 +59,27 @@ int main(int argv,char *argc[]){
         case 1: problem1();break;
         case 2: problem2();break;
         case 3: problem3();break;
-       
+        case 4: problem3();break;
+        case 5: problem3();break;
+        case 6: problem3();break;
+        
             default:;
         };
-    }while(inN<4);
+    }while(inN<7);
     return 0;
 }
 
 //Menu Function
 void Menu(){
-    cout<<"You Have Three Choices for vehicles. Remember, you only have 1000 Dollars!\n" 
-    <<"Your fastest choice is a Bentley Flying Spur W12\n" 
-    <<"This baby will take you home in just 4 events! However it comes at a cost of 750 Dollars.\n"
-    <<"Your confort choice is the a good old Honda Accord.\nIt's obvously not nearly as fast as the Bentley "
-    <<"But the price is far more affortable at just 400 Dollars. This baby will take you home in 8 Events.\n"
-    <<"If you're feeling cheep and want to enjoy the ride, you can purchase a Nissan Vanette.\nA nice little van that the kids will love "
-    <<"at a dirt cheep price of 200 Dollars; however this baby will take 12 events to take you home\n"
-    <<"     Press '1' to purchase the Bentley(750 Dollars)\n"
-    <<"     Press '2' to purchase the Accord(400 Dollars)\n"
-    <<"     Press '3' to purchase the Nissan Vanette(200 Dollars)\n"
-    <<"     Press '4' to quit the game\n";
-}
+
+    cout<<endl<<"     Press '1' to purchase the Bentley and Handgun (800 Dollars)\n"
+    <<"     Press '2' to purchase the Accord and Handgun(450 Dollars)\n"
+    <<"     Press '3' to purchase the Nissan Vanette and Handgun(250 Dollars)\n";
+   cout<<"     Press 4' to purchase the Bentley and Shotgun (850 Dollars)\n"
+    <<"     Press '5' to purchase the Accord and Shotgun(500 Dollars)\n"
+    <<"     Press '6' to purchase the Nissan Vanette and Shotgun(300 Dollars)\n"
+    <<"     Press '7' to quit the game\n";
+} 
 
 //Choose problem number function
 int getN(){
@@ -78,9 +92,9 @@ int getN(){
 void problem1(){
     int cash;
      
-    cash=750;
+    cash=200;
     
-    cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentlwy Flyiing Spur!\n"
+    cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentlwy Flyiing Spur and a handgun!\n"
     "Now your have a total of " <<cash<<" Dollars.\n";
 }
 
@@ -94,6 +108,20 @@ void problem3(){
     cout<<"In problem # 3"<<endl<<endl;
 }
 
+//Solution to problem 4
+void problem4(){
+    cout<<"In problem # 4"<<endl<<endl;
+}
+
+//Solution to problem 5
+void problem5(){
+    cout<<"In problem # 5"<<endl<<endl;
+}
+
+//Solution to problem 3
+void problem6(){
+    cout<<"In problem # 6"<<endl<<endl;
+}
 
 //Exit Comment
 void def(int inN){
