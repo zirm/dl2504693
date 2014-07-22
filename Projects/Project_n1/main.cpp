@@ -111,7 +111,7 @@ void problem1(){
     cout<<"     Press F if you would like not purchase HP\n";	
     cin>>hp_purchase;
     
-    //loop for purchasing HP
+    //switch for purchasing HP
     switch(hp_purchase)
     {
         case'A':
