@@ -90,7 +90,7 @@ int getN(){
     return inN;
 }
 
-//Solution to problem 1
+//Bentley with handgun
 void problem1(){
     int cash, hp,random, gun_random, random_2, sta;
     char hp_purchase, dummy;//, choice;
@@ -774,7 +774,7 @@ void problem2(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 12 || hp < 0 || hp>1000; sta++)
 {
     
     random = rand()%100+1;
@@ -1362,7 +1362,7 @@ void problem3(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 16 || hp < 0 || hp>1000; sta++)
 {
     
     random = rand()%100+1;
@@ -2540,7 +2540,7 @@ void problem5(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 12 || hp < 0 || hp>1000; sta++)
 {
     
     random = rand()%100+1;
@@ -3128,7 +3128,7 @@ void problem6(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 16 || hp < 0 || hp>1000; sta++)
 {
     
     random = rand()%100+1;
