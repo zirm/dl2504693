@@ -106,8 +106,8 @@ void problem1(){
     cout<<"     10HP for 40 dollars (Press A to purchase)\n";
     cout<<"     25HP for 80 dollars (Press B to purchase)\n";
     cout<<"     60HP for 120 dollars (Press C to purchase)\n";
-    cout<<"     90HP for 290 dollars (Press D to purchase)\n";
-    cout<<"     200HP for 500 dollars (Press E to purchase)\n";
+    //cout<<"     90HP for 290 dollars (Press D to purchase)\n";
+    //cout<<"     200HP for 500 dollars (Press E to purchase)\n";
     cout<<"     Press F if you would like not purchase HP\n";	
     cin>>hp_purchase;
     
@@ -384,10 +384,10 @@ if(random>40 && random<=48)
       
         }
 // Sixth possible Event
-    if(random>48 && random<=56)
+   // if(random>48 && random<=56)
     {
-        cout<<endl<<"You've Found a Merchant selling HP!\n";
-        cout<<"If you would like to buy click 'Y'. If you don't want to press 'N'\n";
+        cout<<endl<<"You must once again hunt!\n";
+        cout<<"If you would like to hunt click 'Y'. If you don't want to press 'N'\n";
         cin>>choice;
         
         //start of yes event
@@ -697,7 +697,7 @@ void problem2(){
     cout<<"     25HP for 80 dollars (Press B to purchase)\n";
     cout<<"     60HP for 120 dollars (Press C to purchase)\n";
     cout<<"     90HP for 290 dollars (Press D to purchase)\n";
-    cout<<"     200HP for 500 dollars (Press E to purchase)\n";
+    //cout<<"     200HP for 500 dollars (Press E to purchase)\n";
     cout<<"     Press F if you would like not purchase HP\n";	
     cin>>hp_purchase;
     
@@ -976,8 +976,8 @@ if(random>40 && random<=48)
 // Sixth possible Event
     if(random>48 && random<=56)
     {
-        cout<<endl<<"You've Found a Merchant selling HP!\n";
-        cout<<"If you would like to buy click 'Y'. If you don't want to press 'N'\n";
+        cout<<endl<<"You must hunt to feed your family!!\n";
+        cout<<"If you would like to hunt click 'Y'. If you don't want to press 'N'\n";
         cin>>choice;
         
         //start of yes event
@@ -1564,8 +1564,8 @@ if(random>40 && random<=48)
 // Sixth possible Event
     if(random>48 && random<=56)
     {
-        cout<<endl<<"You've Found a Merchant selling HP!\n";
-        cout<<"If you would like to buy click 'Y'. If you don't want to press 'N'\n";
+        cout<<endl<<"You must hunt to feed your family!\n";
+        cout<<"If you would like to hunt click 'Y'. If you don't want to press 'N'\n";
         cin>>choice;
         
         //start of yes event
@@ -1873,8 +1873,8 @@ void problem4(){
     cout<<"     10HP for 40 dollars (Press A to purchase)\n";
     cout<<"     25HP for 80 dollars (Press B to purchase)\n";
     cout<<"     60HP for 120 dollars (Press C to purchase)\n";
-    cout<<"     90HP for 290 dollars (Press D to purchase)\n";
-    cout<<"     200HP for 500 dollars (Press E to purchase)\n";
+    //cout<<"     90HP for 290 dollars (Press D to purchase)\n";
+    //cout<<"     200HP for 500 dollars (Press E to purchase)\n";
     cout<<"     Press F if you would like not purchase HP\n";	
     cin>>hp_purchase;
     
@@ -1971,7 +1971,7 @@ for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp-20;
                 cout<<endl<<"Your pathetic attempt at hunting failed! You have tried to hunt a bear and the bear hunted you!\n"
@@ -2008,7 +2008,7 @@ for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
         {
            random_2= rand()%10+1;
            
-            if(random_2<5)
+            if(random_2<2)
             {
                 hp=hp-40;
                 cash=cash-30;
@@ -2153,8 +2153,8 @@ if(random>40 && random<=48)
 // Sixth possible Event
     if(random>48 && random<=56)
     {
-        cout<<endl<<"You've Found a Merchant selling HP!\n";
-        cout<<"If you would like to buy click 'Y'. If you don't want to press 'N'\n";
+        cout<<endl<<"Youmust hunt to feed your family!\n";
+        cout<<"If you would like to hunt click 'Y'. If you don't want to press 'N'\n";
         cin>>choice;
         
         //start of yes event
@@ -2162,7 +2162,7 @@ if(random>40 && random<=48)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp-20;
                 cout<<endl<<"Your pathetic attempt at hunting failed! You have tried to hunt a bear and the bear hunted you!\n"
@@ -2343,7 +2343,7 @@ if(random>86 && random<=94)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp;
                 
@@ -2560,7 +2560,7 @@ for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp-20;
                 cout<<endl<<"Your pathetic attempt at hunting failed! You have tried to hunt a bear and the bear hunted you!\n"
@@ -2742,8 +2742,8 @@ if(random>40 && random<=48)
 // Sixth possible Event
     if(random>48 && random<=56)
     {
-        cout<<endl<<"You've Found a Merchant selling HP!\n";
-        cout<<"If you would like to buy click 'Y'. If you don't want to press 'N'\n";
+        cout<<endl<<"You must hunt to feed your family!!\n";
+        cout<<"If you would like to hunt click 'Y'. If you don't want to press 'N'\n";
         cin>>choice;
         
         //start of yes event
@@ -2751,7 +2751,7 @@ if(random>40 && random<=48)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp-20;
                 cout<<endl<<"Your pathetic attempt at hunting failed! You have tried to hunt a bear and the bear hunted you!\n"
@@ -2932,7 +2932,7 @@ if(random>86 && random<=94)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp;
                 
@@ -3148,7 +3148,7 @@ for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp-20;
                 cout<<endl<<"Your pathetic attempt at hunting failed! You have tried to hunt a bear and the bear hunted you!\n"
@@ -3330,8 +3330,8 @@ if(random>40 && random<=48)
 // Sixth possible Event
     if(random>48 && random<=56)
     {
-        cout<<endl<<"You've Found a Merchant selling HP!\n";
-        cout<<"If you would like to buy click 'Y'. If you don't want to press 'N'\n";
+        cout<<endl<<"You must once again hunt to feed your family!\n";
+        cout<<"If you would like to hunt click 'Y'. If you don't want to press 'N'\n";
         cin>>choice;
         
         //start of yes event
@@ -3339,7 +3339,7 @@ if(random>40 && random<=48)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp-20;
                 cout<<endl<<"Your pathetic attempt at hunting failed! You have tried to hunt a bear and the bear hunted you!\n"
@@ -3520,7 +3520,7 @@ if(random>86 && random<=94)
         {
             random_2= rand()%10+1;
             
-            if(random_2<5)
+            if(random_2<3)
             {
                 hp=hp;
                 
