@@ -75,7 +75,7 @@ void Menu(){
     cout<<endl<<"     Press '1' to purchase the Bentley and Handgun (800 Dollars)\n"
     <<"     Press '2' to purchase the Accord and Handgun(450 Dollars)\n"
     <<"     Press '3' to purchase the Nissan Vanette and Handgun(250 Dollars)\n";
-   cout<<"     Press 4' to purchase the Bentley and Shotgun (850 Dollars)\n"
+   cout<<"     Press '4' to purchase the Bentley and Shotgun (850 Dollars)\n"
     <<"     Press '5' to purchase the Accord and Shotgun(500 Dollars)\n"
     <<"     Press '6' to purchase the Nissan Vanette and Shotgun(300 Dollars)\n"
     <<"     Press '7' to quit the game\n";
@@ -90,12 +90,112 @@ int getN(){
 
 //Solution to problem 1
 void problem1(){
-    int cash;
-     
+    int cash, hp,dummy, random, gun_random, random_2, sta, choice;
+    char hp_purchase;
+    
+    hp=70;
     cash=200;
     
-    cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentlwy Flyiing Spur and a handgun!\n"
+    cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentley Flying Spur and a handgun!\n"
     "Now your have a total of " <<cash<<" Dollars.\n";
+    cout<<"Before we embark on our journey you must purchase HP. You have 70HP by default.\n";
+    cout<<"Don't use up all your money though! You could find shops with much cheeper prices in your journey or you could need your money to get out of a hairy situation!\n";
+    cout<<"You can purchase more for the price of:\n";
+    cout<<"     10HP for 40 dollars (Press A to purchase)\n";
+    cout<<"     25HP for 80 dollars (Press B to purchase)\n";
+    cout<<"     60HP for 120 dollars (Press C to purchase)\n";
+    cout<<"     90HP for 290 dollars (Press D to purchase)\n";
+    cout<<"     200HP for 500 dollars (Press E to purchase)\n";
+    cout<<"     Press F if you would like not purchase HP\n";	
+    cin>>hp_purchase;
+    
+    //loop for purchasing HP
+    switch(hp_purchase)
+    {
+        case'A':
+	case'a':
+	
+	hp=hp+10;
+	cash=cash-40;
+	
+    cout<<"You've Chosen to buy 10HP. Your new HP value is: "<<hp<<" and you now have "<<cash<< "dollars!\n"; 
+
+    break;
+
+    case'B':
+        case'b':
+
+	hp=hp+25;
+	cash=cash-80;
+	
+    cout<<"You've Chosen to buy 25HP. Your new HP value is:"<<hp<<" and you now have"<<cash<< "dollars!\n"; 
+
+    break;
+    
+    case'C':
+    case'c':
+
+	hp=hp+60;
+	cash=cash-120;
+	
+    cout<<"You've Chosen to buy 60HP. Your new HP value is:"<<hp<<" and you now have"<<cash<< "dollars!\n"; 
+    
+    break;
+    
+    case'D':
+    case'd':
+
+	hp=hp+90;
+	cash=cash-290;
+	
+    cout<<"You've Chosen to buy 90HP. Your new HP value is:"<<hp<<" and you now have"<<cash<< "dollars!\n"; 
+
+    break;
+    
+        case'E':
+	case'e':
+
+	hp=hp+200;
+	cash=cash-500;
+	
+    cout<<"You've Chosen to buy 200HP. Your new HP value is:"<<hp<<" and you now have"<<cash<< "dollars!\n"; 
+
+    break;
+    
+        case'F':
+	case'f':
+
+	hp=hp;
+	cash=cash;
+	
+    cout<<"You've Chosen to buy 0HP. Your HP value is:"<<hp<<" and you have"<<cash<< "dollars!\n"; 
+
+    break;
+            
+
+    }
+    
+//Start of game  
+ 
+    cout<<endl<<"Now you're ready to start your journey!\n"
+    <<"Press any key to start\n";
+    cin>>dummy;
+//Loop for the game possibilities    
+for (sta = 0; sta < 5 || hp== 0 || hp==1000; sta++)
+{
+    if(random=1)
+    {
+        cout<<endl<<"Your family is Starving! You can go out hunting or you could let your family starve and lose HP!\n";
+        cout<<"If you would like to go hunting 'Y'. If you don want to press 'N'\n";
+        //cin>>choice;
+    }
+    
+//last of loop    
+}
+    
+    
+    
+//end    
 }
 
 //Solution to problem 2
