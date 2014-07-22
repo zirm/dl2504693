@@ -1,6 +1,6 @@
 //David Leanos
 //July 10th, 2014
-//homework and midterm, etc....
+//Project #1
 
 //System Libraries
 #include <cstdlib>
@@ -29,8 +29,8 @@ int main(int argv,char *argc[]){
     char dummy;
       
 
-    cout<<"Welcome to the Oregon Trail: The Modern Edition!\nYou will be challenged with the task of getting your family";
-    cout<<" across America and into the great State of Oregon.\nDo you accept the challenge?\nPress any key to continue (If you don't continue your family will die...)"; 
+    cout<<"Welcome to the Dakota Trail: The Modern Edition!\nYou will be challenged with the task of getting your family";
+    cout<<" across America and into the great State of Dakota.\nDo you accept the challenge?\nPress any key to continue (If you don't continue your family will die...)"; 
     cin>>dummy;
     cout<<endl;
     cout<<"In your great journey you will need a vehicle to great across the country. Make your choice wise.\n";
