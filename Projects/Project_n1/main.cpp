@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <cmath>
 #include <climits>
+#include <fstream>
 using namespace std;
 
 //Global Constants
@@ -20,6 +21,12 @@ void def(int);
 void problem1();
 void problem2();
 void problem3();
+void problem4();
+void problem5();
+void problem6();
+void readFromFile(string, string[],const int);
+void printArray(string[], const int);
+
 
 
 //Execution begins here
@@ -27,7 +34,15 @@ int main(int argv,char *argc[]){
     srand(time(0));
     int inN;
     char dummy;
-      
+    
+    string filename = "art.txt";
+    const int SIZE = 4;
+    string art[SIZE];
+    string art2[SIZE];
+    readFromFile(filename,art,SIZE);
+    filename = "art2.txt";
+    readFromFile(filename,art2,SIZE);
+    printArray(art,SIZE);  
 
     cout<<"Welcome to the Dakota Trail: The Modern Edition!\nYou will be challenged with the task of getting your family";
     cout<<" across America and into the great State of Dakota.\nDo you accept the challenge?\nPress any key to continue (If you don't continue your family will die...)"; 
@@ -39,6 +54,7 @@ int main(int argv,char *argc[]){
     cout<<"Use your money wisely. You only have 1000 Cash.\n";
     cout<<"Press any key to continue";
     cin>>dummy;
+
     
     cout<<endl<<"You Have Three Choices for vehicles. Remember, you only have 1000 Dollars!\n" 
     <<"Your fastest choice is a Bentley Flying Spur W12\n" 
@@ -61,9 +77,9 @@ int main(int argv,char *argc[]){
         case 1: problem1();break;
         case 2: problem2();break;
         case 3: problem3();break;
-        case 4: problem3();break;
-        case 5: problem3();break;
-        case 6: problem3();break;
+        case 4: problem4();break;
+        case 5: problem5();break;
+        case 6: problem6();break;
         
             default:;
         };
@@ -98,8 +114,21 @@ void problem1(){
     hp=70;
     cash=200;
     
+    string filename = "art.txt";
+    const int SIZE = 10;
+    string art[SIZE];
+    string art2[SIZE];
+    readFromFile(filename,art,SIZE);
+    filename = "art2.txt";
+    readFromFile(filename,art2,SIZE);
+   
+
+    
     cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentley Flying Spur and a handgun!\n"
     "Now your have a total of " <<cash<<" Dollars.\n";
+    printArray(art2,SIZE);  
+    cin>>dummy;
+            
     cout<<"Before we embark on our journey you must purchase HP. You have 70HP by default.\n";
     cout<<"Don't use up all your money though! You could find shops with much cheeper prices in your journey or you could need your money to get out of a hairy situation!\n";
     cout<<"You can purchase more for the price of:\n";
@@ -1276,8 +1305,20 @@ void problem3(){
     hp=70;
     cash=750;
     
-    cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentley Flying Spur and a handgun!\n"
+    string filename = "art.txt";
+    const int SIZE = 7;
+    string art[SIZE];
+    string art3[SIZE];
+    readFromFile(filename,art,SIZE);
+    filename = "art3.txt";
+    readFromFile(filename,art3,SIZE);
+    
+    cout<<"Congratulations on your purchase of a van and a handgun!\n"
     "Now your have a total of " <<cash<<" Dollars.\n";
+    printArray(art3,SIZE); 
+    cin>>dummy;
+    
+    
     cout<<"Before we embark on our journey you must purchase HP. You have 70HP by default.\n";
     cout<<"Don't use up all your money though! You could find shops with much cheeper prices in your journey or you could need your money to get out of a hairy situation!\n";
     cout<<"You can purchase more for the price of:\n";
@@ -1865,8 +1906,23 @@ void problem4(){
     hp=70;
     cash=150;
     
+     string filename = "art.txt";
+    const int SIZE = 10;
+    string art[SIZE];
+    string art2[SIZE];
+    readFromFile(filename,art,SIZE);
+    filename = "art2.txt";
+    readFromFile(filename,art2,SIZE);
+    
+    
+    
     cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentley Flying Spur and a handgun!\n"
     "Now your have a total of " <<cash<<" Dollars.\n";
+    
+    printArray(art2,SIZE); 
+    
+    cin>>dummy;
+    
     cout<<"Before we embark on our journey you must purchase HP. You have 70HP by default.\n";
     cout<<"Don't use up all your money though! You could find shops with much cheeper prices in your journey or you could need your money to get out of a hairy situation!\n";
     cout<<"You can purchase more for the price of:\n";
@@ -3039,11 +3095,24 @@ void problem6(){
        int cash, hp,random, gun_random, random_2, sta;
     char hp_purchase, dummy;//, choice;
     
+    string filename = "art.txt";
+    const int SIZE = 7;
+    string art[SIZE];
+    string art3[SIZE];
+    readFromFile(filename,art,SIZE);
+    filename = "art3.txt";
+    readFromFile(filename,art3,SIZE);
+    
+    
     hp=70;
     cash=700;
     
-    cout<<"Congratulations on your purchase of a used(come on, we all know you can't afford a new one) Bentley Flying Spur and a handgun!\n"
+    cout<<"Congratulations on your purchase of a Van and a Shotgun!\n"
     "Now your have a total of " <<cash<<" Dollars.\n";
+    
+     printArray(art3,SIZE); 
+     cin>>dummy;
+    
     cout<<"Before we embark on our journey you must purchase HP. You have 70HP by default.\n";
     cout<<"Don't use up all your money though! You could find shops with much cheeper prices in your journey or you could need your money to get out of a hairy situation!\n";
     cout<<"You can purchase more for the price of:\n";
@@ -3620,6 +3689,20 @@ if(random>94 && random<=102)
         cout<<endl;
        
     }   
+}
+void readFromFile(string name, string art[], const int SIZE){
+    fstream artfile;
+    artfile.open(name.c_str());
+    
+    for(int i=0;i<SIZE;i++)
+        getline(artfile,art[i]);
+  
+    artfile.close();
+    
+}
+void printArray(string art[], const int SIZE){
+    for(int i=0;i<SIZE;i++)
+        cout<<art[i]<<endl;
 }
 
 //Exit Comment
