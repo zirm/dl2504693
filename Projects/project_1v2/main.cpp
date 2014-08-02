@@ -10,6 +10,7 @@
 #include <cmath>
 #include <climits>
 #include <fstream>
+#include <string>
 using namespace std;
 
 //Global Constants
@@ -26,6 +27,8 @@ void problem5();
 void problem6();
 void readFromFile(string, string[],const int);
 void printArray(string[], const int);
+int distance(int number);
+
 
 
 
@@ -34,7 +37,10 @@ int main(int argv,char *argc[]){
     srand(time(0));
     int inN;
     char dummy;
-    
+    string name;
+    int guess;
+
+
     string filename = "art.txt";
     const int SIZE = 4;
     string art[SIZE];
@@ -44,9 +50,33 @@ int main(int argv,char *argc[]){
     readFromFile(filename,art2,SIZE);
     printArray(art,SIZE);  
 
-    cout<<"Welcome to the Dakota Trail: The Modern Edition!\nYou will be challenged with the task of getting your family";
+
+
+
+
+
+    cout<<"Welcome (What's your full name?)"<<endl;
+        getline(cin, name);
+        cout<<endl;
+        cout<<"Welcome "<< name<<endl;
+
+    cout<<"To the Dakota Trail: The Modern Edition!\nYou will be challenged with the task of getting your family";
     cout<<" across America and into the great State of Dakota.\nDo you accept the challenge?\nPress any key to continue (If you don't continue your family will die...)"; 
+    cout<<endl;
     cin>>dummy;
+    
+    cout<<"Before we start, lets see how good you're at extimating distances. Input how many miles you think RCC is from Dakota\n";
+    cin>>guess;
+    
+    distance (guess);
+    guess=distance(guess);
+    cout<<"Not quite. Your guess is ";
+    cout<<guess;
+    cout<<" off! Anyways, lets start playing. Press any key to continue";
+    cin>>dummy;
+
+
+
     cout<<endl;
     cout<<"In your great journey you will need a vehicle to great across the country. Make your choice wise.\n";
     cout<<"If you get a fast vehicle, you will arrive to Oregon Quicker, facing less dangers; however, you will have less\n";
@@ -213,11 +243,12 @@ void problem1(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
- for (sta = 0; sta < 4 && hp > 0 && hp<1000; sta++)
+ for (sta = 0; sta < 2 && hp > 0 && hp<1000; sta++)
 {
-    
+    random=0;
     random = rand()%100+1;
     // First possible Event
+    
     if(random>=1 && random<=8)
     {
         cout<<endl<<"Your family is Starving! You can go out hunting or you could let your family starve and lose HP!\n";
@@ -706,6 +737,35 @@ if(random>94 && random<=102)
        
     }   
     
+    ofstream outputFile;
+    string word1,word2,word3;
+
+    outputFile.open("last_word.txt");
+
+
+
+
+    cout<<"You've completed the game!\n";
+    cout<<" Tell me three words that descrive this game and Ill be sure to remember them by writing them down on a text file!"<<endl;
+cin>>word1;
+cin>>word2;
+cin>>word3;
+    cout<<"Hmm... so you think the game is ";
+    cout<<word1;
+    cout<<" ";
+    cout<<word2;
+    cout<<" and ";
+    cout<<word3;
+    cout<<". Alright! I'be sure to write it down! Press any key to play again.\n";
+    cin>>dummy;
+    outputFile<<word1<<endl;
+    outputFile<<word2<<endl;
+    outputFile<<word3<<endl;
+
+
+    outputFile.close();
+
+
 //end    
 }
 
@@ -816,7 +876,7 @@ void problem2(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 12 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 12 && hp > 0 && hp < 1000; sta++)
 {
     
     random = rand()%100+1;
@@ -1308,6 +1368,34 @@ if(random>94 && random<=102)
         cout<<endl;
        
     }   
+ofstream outputFile;
+    string word1,word2,word3;
+
+    outputFile.open("last_word.txt");
+
+
+
+
+    cout<<"You've completed the game!\n";
+    cout<<" Tell me three words that descrive this game and Ill be sure to remember them by writing them down on a text file!"<<endl;
+cin>>word1;
+cin>>word2;
+cin>>word3;
+    cout<<"Hmm... so you think the game is ";
+    cout<<word1;
+    cout<<" ";
+    cout<<word2;
+    cout<<" and ";
+    cout<<word3;
+    cout<<". Alright! I'be sure to write it down! Press any key to play again.\n";
+    cin>>dummy;
+    outputFile<<word1<<endl;
+    outputFile<<word2<<endl;
+    outputFile<<word3<<endl;
+
+
+    outputFile.close();
+
 }
 
 //van with handgun
@@ -1416,7 +1504,7 @@ void problem3(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 16 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 16 && hp > 0 && hp<1000; sta++)
 {
     
     random = rand()%100+1;
@@ -1908,6 +1996,34 @@ if(random>94 && random<=102)
         cout<<endl;
        
     }   
+ofstream outputFile;
+    string word1,word2,word3;
+
+    outputFile.open("last_word.txt");
+
+
+
+
+    cout<<"You've completed the game!\n";
+    cout<<" Tell me three words that descrive this game and Ill be sure to remember them by writing them down on a text file!"<<endl;
+cin>>word1;
+cin>>word2;
+cin>>word3;
+    cout<<"Hmm... so you think the game is ";
+    cout<<word1;
+    cout<<" ";
+    cout<<word2;
+    cout<<" and ";
+    cout<<word3;
+    cout<<". Alright! I'be sure to write it down! Press any key to play again.\n";
+    cin>>dummy;
+    outputFile<<word1<<endl;
+    outputFile<<word2<<endl;
+    outputFile<<word3<<endl;
+
+
+    outputFile.close();
+
 }
 
 //Bentley wit shotgun
@@ -2020,7 +2136,7 @@ void problem4(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 7 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 7 && hp < 0 && hp>1000; sta++)
 {
     
     random = rand()%100+1;
@@ -3117,6 +3233,34 @@ if(random>94 && random<=102)
         cout<<endl;
        
     }   
+ofstream outputFile;
+    string word1,word2,word3;
+
+    outputFile.open("last_word.txt");
+
+
+
+
+    cout<<"You've completed the game!\n";
+    cout<<" Tell me three words that descrive this game and Ill be sure to remember them by writing them down on a text file!"<<endl;
+cin>>word1;
+cin>>word2;
+cin>>word3;
+    cout<<"Hmm... so you think the game is ";
+    cout<<word1;
+    cout<<" ";
+    cout<<word2;
+    cout<<" and ";
+    cout<<word3;
+    cout<<". Alright! I'be sure to write it down! Press any key to play again.\n";
+    cin>>dummy;
+    outputFile<<word1<<endl;
+    outputFile<<word2<<endl;
+    outputFile<<word3<<endl;
+
+
+    outputFile.close();
+
 }
 
 //van with shotgun
@@ -3226,7 +3370,7 @@ void problem6(){
     cin>>dummy;
 char choice;    
 //Loop for the game possibilities    
-for (sta = 0; sta < 16 || hp < 0 || hp>1000; sta++)
+for (sta = 0; sta < 16 && hp > 0 && hp<1000; sta++)
 {
     
     random = rand()%100+1;
@@ -3718,6 +3862,34 @@ if(random>94 && random<=102)
         cout<<endl;
        
     }   
+ofstream outputFile;
+    string word1,word2,word3;
+
+    outputFile.open("last_word.txt");
+
+
+
+
+    cout<<"You've completed the game!\n";
+    cout<<" Tell me three words that descrive this game and Ill be sure to remember them by writing them down on a text file!"<<endl;
+cin>>word1;
+cin>>word2;
+cin>>word3;
+    cout<<"Hmm... so you think the game is ";
+    cout<<word1;
+    cout<<" ";
+    cout<<word2;
+    cout<<" and ";
+    cout<<word3;
+    cout<<". Alright! I'be sure to write it down! Press any key to play again.\n";
+    cin>>dummy;
+    outputFile<<word1<<endl;
+    outputFile<<word2<<endl;
+    outputFile<<word3<<endl;
+
+
+    outputFile.close();
+
 }
 void readFromFile(string name, string art[], const int SIZE){
     fstream artfile;
@@ -3732,6 +3904,14 @@ void readFromFile(string name, string art[], const int SIZE){
 void printArray(string art[], const int SIZE){
     for(int i=0;i<SIZE;i++)
         cout<<art[i]<<endl;
+}
+
+int distance(int number){
+
+number=1600-number;
+
+return (number);
+
 }
 
 //Exit Comment
